@@ -2,141 +2,181 @@
 @name          Option Simplifier
 @description   功能按钮精简器
 @preprocessor  transitio
-@version       1.0.1
+@version       1.1.0
 @homepageURL   https://github.com/QingFeng-awa/TransitioStyle
 @author        QingFeng
 @license     	GPL-3.0
-@var checkbox hide-expression "隐藏输入框“表情”选项" [0, "inline-flex", "none"]
-@var checkbox hide-collect "隐藏输入框“截图”选项" [0, "inline-flex", "none"]
-@var checkbox hide-file "隐藏输入框“文件”选项" [0, "inline-flex", "none"]
-@var checkbox hide-picture "隐藏输入框“图片”选项" [1, "inline-flex", "none"]
-@var checkbox hide-Red-envelope "隐藏输入框“红包”选项" [1, "inline-flex", "none"]
-@var checkbox hide-Voice-message "隐藏输入框“语音消息”选项" [1, "inline-flex", "none"]
-@var checkbox hide-Chat-history "隐藏输入框“聊天记录”选项" [0, "inline-flex", "none"]
+@var checkbox hide-input-expression "隐藏输入框“表情”选项" [0, "inline-flex", "none"]
+@var checkbox hide-input-screenshot "隐藏输入框“截图”选项" [0, "inline-flex", "none"]
+@var checkbox hide-input-folder "隐藏输入框“文件”选项" [0, "inline-flex", "none"]
+@var checkbox hide-input-image "隐藏输入框“图片”选项" [0, "inline-flex", "none"]
+@var checkbox hide-input-lucky-money "隐藏输入框“红包”选项" [0, "inline-flex", "none"]
+@var checkbox hide-input-microphone-on "隐藏输入框“语音消息”选项" [0, "inline-flex", "none"]
+@var checkbox hide-input-shortcuts-right "隐藏输入框“聊天记录”选项" [0, "inline-flex", "none"]
 
-@var checkbox hide-Window-jitter "隐藏私聊输入框“窗口抖动”选项" [1, "inline-flex", "none"]
+@var checkbox hide-private-input-shake "隐藏私聊输入框“窗口抖动”选项" [0, "inline-flex", "none"]
 
-@var checkbox hide-Robot-nstructions "隐藏群聊输入框“机器人指令”选项" [1, "inline-flex", "none"]
+@var checkbox hide-group-input-channel-robot "隐藏群聊输入框“机器人指令”选项" [0, "inline-flex", "none"]
 
-@var checkbox hide-voice-call "隐藏聊天框“语音通话”选项" [1, "inline-flex", "none"]
-@var checkbox hide-Video-call "隐藏聊天框“视频通话”选项" [1, "inline-flex", "none"]
-@var checkbox hide-Screen-sharing "隐藏聊天框“屏幕共享”选项" [1, "inline-flex", "none"]
-@var checkbox hide-More "隐藏聊天框“更多”选项" [0, "inline-flex", "none"]
+@var checkbox hide-chat-telephone "隐藏聊天框“语音通话”选项" [0, "inline-flex", "none"]
+@var checkbox hide-chat-video-on "隐藏聊天框“视频通话”选项" [0, "inline-flex", "none"]
+@var checkbox hide-chat-share-screen "隐藏聊天框“屏幕共享”选项" [0, "inline-flex", "none"]
+@var checkbox hide-chat-more "隐藏聊天框“更多”选项" [0, "inline-flex", "none"]
 
-@var checkbox hide-Remote-assistance "隐藏私聊聊天框“远程协助”选项" [1, "inline-flex", "none"]
-@var checkbox hide-Initiate-a-group-chat "隐藏私聊聊天框“发起群聊”选项" [1, "inline-flex", "none"]
+@var checkbox hide-private-chat-remote-control "隐藏私聊聊天框“远程协助”选项" [0, "inline-flex", "none"]
+@var checkbox hide-private-chat-group-building "隐藏私聊聊天框“发起群聊”选项" [0, "inline-flex", "none"]
 
-@var checkbox hide-Invite-to-join-the-group "隐藏群聊聊天框“邀请加群”选项" [1, "inline-flex", "none"]
-@var checkbox hide-Party-apps "隐藏群聊聊天框“群应用”选项" [1, "inline-flex", "none"]
+@var checkbox hide-group-chat-group-application "隐藏群聊聊天框“群应用”选项"[0, "inline-flex", "none"]
+@var checkbox hide-group-chat-group-building "隐藏群聊聊天框“邀请加群”选项" [0, "inline-flex", "none"]
 
-@var checkbox hide-Block-painting "隐藏临时会话聊天框“屏蔽会话”选项" [1, "inline-flex", "none"]
-@var checkbox hide-Add-friend "隐藏临时会话聊天框“添加好友”选项" [1, "inline-flex", "none"]
+@var checkbox hide-temporary-chat-shield "隐藏临时会话聊天框“屏蔽会话”选项" [0, "inline-flex", "none"]
+@var checkbox hide-temporary-chat-add-friend "隐藏临时会话聊天框“添加好友”选项" [0, "inline-flex", "none"]
+
+@var checkbox hide-upper-sidebar-message "隐藏侧边栏“消息”选项" [0, "inline-flex", "none"]
+@var checkbox hide-upper-sidebar-friend "隐藏侧边栏“联系人”选项" [0, "inline-flex", "none"]
+@var checkbox hide-upper-sidebar-qzone "隐藏侧边栏“空间”选项" [0, "inline-flex", "none"]
+@var checkbox hide-upper-sidebar-more "隐藏侧边栏“更多功能”选项" [0, "inline-flex", "none"]
+
+@var checkbox hide-lower-sidebar-variable "隐藏侧边栏可变（邮箱/收藏/文件/调色盘）选项" [0, "inline-flex", "none"]
+@var checkbox hide-lower-sidebar-phone "隐藏侧边栏“我的手机”选项" [0, "inline-flex", "none"]
 ==/UserStyle== */
 
 /* === 输入框按钮精简 === */
 
 [bf-label-inner="true"][aria-label="表情"] {
-   display: var(--hide-expression) !important;
+   display: var(--hide-input-expression) !important;
 }
 
 
 [bf-label-inner="true"][aria-label="截图"] {
-   display: var(--hide-collect) !important;
+   display: var(--hide-input-screenshot) !important;
 }
 
 #id-func-bar-screenshot {
-   display: var(--hide-collect) !important;
+   display: var(--hide-input-screenshot) !important;
 }
 
 
 [bf-label-inner="true"][aria-label="文件"] {
-   display: var(--hide-file) !important;
+   display: var(--hide-input-folder) !important;
 }
 
 #id-func-bar-folder {
-   display: var(--hide-file) !important;
+   display: var(--hide-input-folder) !important;
 }
 
 .icon-item[bf-label-inner="true"][aria-label="图片"] {
-   display: var(--hide-picture) !important;
-}
-
-
-[bf-label-inner="true"][aria-label="窗口抖动"] {
-   display: var(--hide-Window-jitter) !important;
+   display: var(--hide-input-image) !important;
 }
 
 
 [bf-label-inner="true"][aria-label="红包"] {
-   display: var(--hide-Red-envelope) !important;
+   display: var(--hide-input-lucky-money) !important;
 }
 
 
 [bf-label-inner="true"][aria-label="语音消息"] {
-   display: var(--hide-Voice-message) !important;
-}
-
-
-[bf-label-inner="true"][aria-label="机器人指令"] {
-   display: var(--hide-Robot-nstructions) !important;
+   display: var(--hide-input-microphone-on) !important;
 }
 
 
 [bf-label-inner="true"][aria-label="聊天记录"] {
-   display: var(--hide-Chat-history) !important;
+   display: var(--hide-input-shortcuts-right) !important;
+}
+
+
+[bf-label-inner="true"][aria-label="窗口抖动"] {
+   display: var(--hide-private-input-shake) !important;
+}
+
+
+[bf-label-inner="true"][aria-label="机器人指令"] {
+   display: var(--hide-group-input-channel-robot) !important;
 }
 
 /* === 聊天框按钮精简 === */
 
 [bf-label-inner="true"][aria-label="语音通话"] {
-   display: var(--hide-voice-call) !important;
+   display: var(--hide-chat-telephone) !important;
 }
 
 
 [bf-label-inner="true"][aria-label="视频通话"] {
-   display: var(--hide-Video-call) !important;
+   display: var(--hide-chat-video-on) !important;
 }
 
 
 [bf-label-inner="true"][aria-label="屏幕共享"] {
-   display: var(--hide-Screen-sharing) !important;
-}
-
-
-[bf-label-inner="true"][aria-label="远程协助"] {
-   display: var(--hide-Remote-assistance) !important;
-}
-
-#id-func-bar-remote_control-arrow {
-   display: var(--hide-Remote-assistance) !important;
-}
-
-
-[bf-label-inner="true"][aria-label="发起群聊"] {
-   display: var(--hide-Initiate-a-group-chat) !important;
+   display: var(--hide-chat-share-screen) !important;
 }
 
 
 #id-func-bar-more {
-   display: var(--hide-More) !important;
+   display: var(--hide-chat-more) !important;
+}
+
+
+[bf-label-inner="true"][aria-label="远程协助"] {
+   display: var(--hide-private-chat-remote-control) !important;
+}
+
+#id-func-bar-remote_control-arrow {
+   display: var(--hide-private-chat-remote-control) !important;
+}
+
+
+[bf-label-inner="true"][aria-label="发起群聊"] {
+   display: var(--hide-private-chat-group-building) !important;
 }
 
 
 #id-func-bar-group_application-arrow,
 [bf-label-inner="true"][aria-label="群应用"] {
-   display: var(--hide-Party-apps) !important;
+   display: var(--hide-group-chat-group-application) !important;
 }
 
 
 [bf-label-inner="true"][aria-label="邀请加群"] {
-   display: var(--hide-Invite-to-join-the-group) !important;
+   display: var(--hide-group-chat-group-building) !important;
 }
 
 [bf-label-inner="true"][aria-label="屏蔽会话"] {
-   display: var(--hide-Block-painting) !important;
+   display: var(--hide-temporary-chat-shield) !important;
 }
 
 
 [bf-label-inner="true"][aria-label="添加好友"] {
-   display: var(--hide-Add-friend) !important;
+   display: var(--hide-temporary-chat-add-friend) !important;
+}
+
+/* === 侧边栏按钮精简 === */
+
+[bf-label-inner="true"][aria-label="消息"] {
+   display: var(--hide-upper-sidebar-message) !important;
+}
+
+
+[bf-label-inner="true"][aria-label="联系人"] {
+   display: var(--hide-upper-sidebar-friend) !important;
+}
+
+
+[bf-label-inner="true"][aria-label="空间"] {
+   display: var(--hide-upper-sidebar-qzone) !important;
+}
+
+
+[bf-label-inner="true"][aria-label="更多"] {
+   display: var(--hide-upper-sidebar-more) !important;
+}
+
+[bf-label-inner="true"][aria-label="邮箱"],
+[bf-label-inner="true"][aria-label="收藏"],
+[bf-label-inner="true"][aria-label="文件管理器"],
+[bf-label-inner="true"][aria-label="调色盘"] {
+   display: var(--hide-lower-sidebar-variable) !important;
+}
+
+[bf-label-inner="true"][aria-label="我的手机"] {
+   display: var(--hide-lower-sidebar-phone) !important;
 }
