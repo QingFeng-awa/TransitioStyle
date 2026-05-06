@@ -2,7 +2,7 @@
 @name          Option Simplifier
 @description   功能按钮精简器
 @preprocessor  transitio
-@version       1.1.0
+@version       1.1.1
 @homepageURL   https://github.com/QingFeng-awa/TransitioStyle
 @author        QingFeng
 @license     	GPL-3.0
@@ -177,6 +177,7 @@
    display: var(--hide-lower-sidebar-variable) !important;
 }
 
-[bf-label-inner="true"][aria-label="我的手机"] {
+/* 添加 handoff-item 防止意外隐藏 To Contact List Top 脚本的回顶部侧栏按钮 */
+.handoff-item[bf-label-inner="true"][aria-label="我的手机"] {
    display: var(--hide-lower-sidebar-phone) !important;
 }
