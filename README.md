@@ -5,4 +5,4 @@
 
 ## Option Simplifier
 
-forked from [YatFanLan/Simplify-chat-boxes](https://github.com/YatFanLan/Simplify-chat-boxes)，精简侧边栏/输入框的一些按钮。
+forked from [YatFanLan/Simplify-chat-boxes](https://github.com/YatFanLan/Simplify-chat-boxes)，复刻了轻量工具箱的侧栏/输入框/聊天框精简功能，支持隐藏大部分功能按钮。
