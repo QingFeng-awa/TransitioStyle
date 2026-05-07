@@ -2,7 +2,7 @@
 @name          Option Simplifier
 @description   功能按钮精简器，支持隐藏界面上大部分的功能按钮。
 @preprocessor  transitio
-@version       1.1.2
+@version       1.2.0
 @homepageURL   https://github.com/QingFeng-awa/TransitioStyle
 @author        QingFeng
 @license     	GPL-3.0
@@ -39,6 +39,14 @@
 
 @var checkbox hide-lower-sidebar-variable "隐藏侧边栏可变（邮箱/收藏/文件/调色盘）选项" [0, "inline-flex", "none"]
 @var checkbox hide-lower-sidebar-phone "隐藏侧边栏“我的手机”选项" [0, "inline-flex", "none"]
+
+@var checkbox hide-menu-variable "隐藏更多菜单可变（邮箱/收藏/文件/调色盘）选项" [0, "inline-flex", "none"]
+@var checkbox hide-menu-chat-history-manage "隐藏更多菜单“聊天记录管理”选项" [0, "inline-flex", "none"]
+@var checkbox hide-menu-check-update "隐藏更多菜单“检查更新”选项" [0, "inline-flex", "none"]
+@var checkbox hide-menu-help "隐藏更多菜单“帮助”选项" [0, "grid", "none"]
+@var checkbox hide-menu-lock "隐藏更多菜单“锁定”选项" [0, "inline-flex", "none"]
+@var checkbox hide-menu-setting "隐藏更多菜单“设置”选项" [0, "inline-flex", "none"]
+@var checkbox hide-menu-logout "隐藏更多菜单“退出账号”选项" [0, "inline-flex", "none"]
 ==/UserStyle== */
 
 /* === 输入框按钮精简 === */
@@ -180,4 +188,34 @@
 
 .handoff-item[bf-label-inner="true"][aria-label="我的手机"] {
    display: var(--hide-lower-sidebar-phone) !important;
+}
+
+/* 更多菜单精简 */
+
+.more-h-menu {
+   display: var(--hide-menu-variable) !important;
+}
+
+.q-context-menu>a:nth-of-type(1) {
+   display: var(--hide-menu-chat-history-manage) !important;
+}
+
+.q-context-menu>a:nth-of-type(2) {
+   display: var(--hide-menu-check-update) !important;
+}
+
+.q-context-menu .q-context-sub-menu {
+   display: var(--hide-menu-help) !important;
+}
+
+.q-context-menu>a:nth-of-type(3) {
+   display: var(--hide-menu-lock) !important;
+}
+
+.q-context-menu>a:nth-of-type(4) {
+   display: var(--hide-menu-setting) !important;
+}
+
+.q-context-menu>a:nth-of-type(5) {
+   display: var(--hide-menu-logout) !important;
 }
